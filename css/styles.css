@@ -14,6 +14,7 @@
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
     --light-gray: hsl(204, 43%, 93%);
+    --white: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
     --karla: 'Karla', sans-serif;
 }
@@ -23,8 +24,8 @@ body {
     min-width: 375px;
     min-height: 812px;
     padding: 105px 32px 77px;
-    background-color: var(--light-gray);
-    color: var(--light-gray);
+    background-color: var(--white);
+    color: var(--white);
 }
 
 .top {
@@ -80,7 +81,7 @@ body {
     flex-grow: 1;
 }
 
-.plan-acces {
+.plan-access {
     font-size: 15px;
     font-weight: 300;
     margin-bottom: 30px;
@@ -94,7 +95,7 @@ body {
     font-size: 15px;
     padding: 10px 0;
     text-decoration: none;
-    color: var(--light-gray);
+    color: var(--white);
     font-weight: 700;
     border-radius: 5px;
 }
@@ -121,4 +122,73 @@ li {
 
 /* Media Queries */
 @media (min-width: 720px) {
+    body {
+        font-family: var(--karla);
+        min-height: 800px;
+        padding: 0;
+        background-color: var(--light-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 636px;
+        border-radius: 10px;
+        box-shadow: 3px 5px 15px hsl(218, 56%, 85%);
+        overflow: hidden;
+    }
+
+    .top-title {
+        padding-top: 60px;
+        font-size: 26px;
+    }
+
+    .top-subtitle {
+        font-size: 19px;
+    }
+
+    .top-paragraph {
+        font-size: 17px;
+    }
+
+    .main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-item {
+        padding: 40px;
+    }
+
+    .plan-name {
+        padding: 0;
+        font-size: 19px;
+    }
+
+    .price-amount {
+        font-size: 30px;
+    }
+
+    .price-frequency {
+        font-size: 16px;
+    }
+
+    .plan-access {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .why-title {
+        padding: 0;
+        font-size: 19px;
+        margin-bottom: 19px;
+    }
+
+    li {
+        font-size: 13px;
+        list-style: none;
+        line-height: 1.5;
+    }
 }
